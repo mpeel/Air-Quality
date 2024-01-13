@@ -1,7 +1,10 @@
-echo "# Air-Quality" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/SimPro01/Air-Quality.git
-git push -u origin main
+The Python code in this depository can be used for air quality sensors assembled using a Raspberry Pi.
+
+The specific sensors used:
+- BME280: https://shop.pimoroni.com/products/bme280-breakout?variant=29420960677971
+- SCD30: https://www.adafruit.com/product/4867
+- PMS5003: https://www.adafruit.com/product/3686
+
+run.py file contains code to run the Raspberry Pi and the sesnors to obtain measurements for the air quality.
+Pressures.py contains code to obtain outdoor pressure at a chosen location.
+analysis.py contains code for analysing and plotting the obtained data.
