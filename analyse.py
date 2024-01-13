@@ -31,7 +31,7 @@ p100s = []  #Particulates larger than 10.0um
 date = []   #Separate arry for the date
 
 # Open the text file
-with open('27_11.txt', 'r') as file:
+with open('file_name.txt', 'r') as file:
     # Read each line in the file
     for line in file:
         # Split the line using a comma as the delimiter
@@ -113,7 +113,7 @@ ax2.set_ylim([300, 1600])
 ax2.set_xlim([8, 20.5])
 
 # Add a big title for the entire figure
-fig.suptitle('LT1, $CO_{2}$ concentration and Temperature', fontsize=17)
+fig.suptitle('$CO_{2}$ concentration and Temperature', fontsize=17)
 
 plt.tight_layout()
 plt.show()
@@ -146,7 +146,7 @@ ax1.tick_params(axis='y', labelsize=13)
 ax1.set_ylim([300, 1600]) 
 
 # Title for the plot
-plt.title('Silent Study room, 01/12/2023', fontsize=17)
+plt.title('CO2 and Temperature, fontsize=17)
 
 # Legend for both y-axes
 lines, labels = ax1.get_legend_handles_labels()
@@ -168,7 +168,7 @@ plt.plot(times, pressures, color='red', label='Indoor', zorder=-1, alpha=0.7)
 plt.plot(time_out, pres_out, color='blue', label='Outdoor', marker='.', zorder=3, alpha=1)
 plt.xlabel('Local Time (h)', fontsize=12)
 plt.ylabel('Pressure (hPa)', fontsize=15)
-plt.title('Pressure comparison, Silent Study vs Outdoors', fontsize=17)
+plt.title('Pressure comparison, Indoor vs Outdoors', fontsize=17)
 
 plt.xticks(fontsize=10)
 plt.yticks(fontsize=13)
@@ -264,7 +264,7 @@ ax1.set_xlabel('Time (min)')
 ax1.set_ylabel('Relative Humidity (%)')
 ax1.tick_params(axis='y')
 
-plt.title('Concentration of particles sized 0.3-0.5 um in Silent Study')
+plt.title('Concentration of particles sized 0.3-0.5 um')
 
 lines, labels = ax1.get_legend_handles_labels()
 lines2, labels2 = ax2.get_legend_handles_labels()
@@ -276,7 +276,7 @@ plt.show()
 
 # Create a 2x2 grid of subplots
 fig, axes = plt.subplots(2, 2, figsize=(10, 8))
-fig.suptitle('Silent 6.12')
+fig.suptitle('Particulates')
 
 # Scatter plot in the top-left subplot with a legend
 axes[0, 0].scatter((date), temperatures, label='BME280', marker='.')
