@@ -9,3 +9,5 @@ The following files were used:
 - run.py file contains code to run the Raspberry Pi and the sesnors to obtain measurements for the air quality.
 - Pressures.py contains code to obtain outdoor pressure at a chosen location.
 - analysis.py contains code for analysing and plotting the obtained data.
+
+The file 3D_design.step contains the 3D printable case for the setup.
