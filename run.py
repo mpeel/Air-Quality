@@ -56,8 +56,11 @@ same_dust_measurement_count = 0
 
 start = time.perf_counter()
 
+current_datetime = str(datetime.now().strftime("%Y-%m-%d %H-%M-%S"))
+file_name = current_datetime + '.txt'
+
 while True:
-    file = open('11_12.txt', 'a') #choose a file, where data should be saved
+    file = open(file_name, 'a') #choose a file, where data should be saved
     # since the measurement interval is long (2+ seconds) we check for new data before reading
     # the values, to ensure current readings.
     if scd.data_available:
